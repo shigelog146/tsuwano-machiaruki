@@ -7,8 +7,8 @@
   <title>津和野まち歩き</title>
   <meta name="description" content="津和野町内の観光施設・文化財・お土産物店を地図と一覧から簡単に探せる案内アプリ" />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-  <script type="module" crossorigin src="./assets/index-Ce9PmN4g.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BXGsFSOv.css">
+  <script type="module" crossorigin src="./assets/index-BbcDgKoS.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-ngQUsqTM.css">
 </head>
 <body>
   <div id="app">
@@ -22,11 +22,22 @@
       <p class="app-tagline">津和野の、ここが分かる。</p>
     </header>
 
-    <!-- カテゴリーボタン。実データから自動生成し、多い場合は折りたたむ -->
-    <nav id="category-bar" class="category-bar" aria-label="カテゴリーで絞り込み"></nav>
+    <!-- カテゴリー・種類の絞り込みエリア。選択後にしまえるようにトグルを設置 -->
+    <div id="filter-panel" class="filter-panel">
+      <div class="filter-toggle-row">
+        <button id="btn-filter-toggle" class="filter-toggle" aria-expanded="true">
+          <span id="filter-summary" class="filter-summary">絞り込み：すべて表示中</span>
+          <span class="filter-toggle-icon" data-icon="chevronDown" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div id="filter-body" class="filter-body">
+        <!-- カテゴリーボタン。実データから自動生成し、多い場合は折りたたむ -->
+        <nav id="category-bar" class="category-bar" aria-label="カテゴリーで絞り込み"></nav>
 
-    <!-- 種類（小カテゴリー）ボタン。多い場合は折りたたむ -->
-    <nav id="subcategory-bar" class="subcategory-bar" aria-label="種類で絞り込み" hidden></nav>
+        <!-- 種類（小カテゴリー）ボタン。多い場合は折りたたむ -->
+        <nav id="subcategory-bar" class="subcategory-bar" aria-label="種類で絞り込み" hidden></nav>
+      </div>
+    </div>
 
     <!-- 地図 / 一覧 切り替えタブ -->
     <div class="view-tabs" role="tablist" aria-label="表示切り替え">
