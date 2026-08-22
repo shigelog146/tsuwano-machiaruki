@@ -7,8 +7,8 @@
   <title>津和野まち歩き</title>
   <meta name="description" content="津和野町内の観光施設・文化財・お土産物店を地図と一覧から簡単に探せる案内アプリ" />
   <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-  <script type="module" crossorigin src="./assets/index-CCCKisA1.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Btvx2kBO.css">
+  <script type="module" crossorigin src="./assets/index-Ce9PmN4g.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BXGsFSOv.css">
 </head>
 <body>
   <div id="app">
@@ -22,13 +22,8 @@
       <p class="app-tagline">津和野の、ここが分かる。</p>
     </header>
 
-    <!-- カテゴリーボタン -->
-    <nav class="category-bar" aria-label="カテゴリーで絞り込み">
-      <button class="cat-btn is-active" data-category="all">すべて</button>
-      <button class="cat-btn" data-category="観光">観光</button>
-      <button class="cat-btn" data-category="文化財">文化財</button>
-      <button class="cat-btn" data-category="お土産">お土産</button>
-    </nav>
+    <!-- カテゴリーボタン。実データから自動生成し、多い場合は折りたたむ -->
+    <nav id="category-bar" class="category-bar" aria-label="カテゴリーで絞り込み"></nav>
 
     <!-- 種類（小カテゴリー）ボタン。多い場合は折りたたむ -->
     <nav id="subcategory-bar" class="subcategory-bar" aria-label="種類で絞り込み" hidden></nav>
